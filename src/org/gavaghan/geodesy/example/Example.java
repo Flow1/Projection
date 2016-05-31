@@ -23,7 +23,7 @@ public class Example
 		Ellipsoid reference = Ellipsoid.WGS84;
 
 		// set Eiffel Tower coordinates
-		GlobalCoordinates eiffelTower;
+		GlobalCoordinates eiffelTower; 
 		eiffelTower = new GlobalCoordinates(48.85889, 2.29583);
 
 		// calculate the geodetic curve
