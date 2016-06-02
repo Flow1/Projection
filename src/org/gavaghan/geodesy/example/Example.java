@@ -23,17 +23,13 @@ public class Example
 		Ellipsoid reference = Ellipsoid.WGS84;
 
 		// set Eiffel Tower coordinates
-<<<<<<< HEAD
 		GlobalCoordinates eiffelTower;
 		
 		double xpos = 48.85889;
 		double ypos = 2.29583;
 		
 		eiffelTower = new GlobalCoordinates(xpos, ypos);
-=======
-		GlobalCoordinates eiffelTower; 
-		eiffelTower = new GlobalCoordinates(48.85889, 2.29583);
->>>>>>> 48f0f73a1e68f9c6e5cc2e44ced199fafca9660a
+
 
 		double x=5000;
 		double y = 0;
