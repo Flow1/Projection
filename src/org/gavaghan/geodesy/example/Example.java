@@ -24,10 +24,35 @@ public class Example
 
 		// set Eiffel Tower coordinates
 		GlobalCoordinates eiffelTower;
-		eiffelTower = new GlobalCoordinates(48.85889, 2.29583);
+		
+		double xpos = 48.85889;
+		double ypos = 2.29583;
+		
+		eiffelTower = new GlobalCoordinates(xpos, ypos);
 
+		double x=5000;
+		double y = 0;
+		double deg = Math.atan2(x, y)*180.0/Math.PI;
+		System.out.println(deg);
+		
+		x=0;y=5000;
+		deg = Math.atan2(x, y)*180.0/Math.PI;
+		System.out.println(deg);
+		
+		x=-5000;y=0;
+		deg = Math.atan2(x, y)*180.0/Math.PI;
+		System.out.println(deg);	
+		
+		x=0;y=-5000;
+		deg = Math.atan2(x, y)*180.0/Math.PI;
+		System.out.println(deg);
+		
+		x=3267;y=-4834;
+		double angle = Math.atan2(x, y)*180.0/Math.PI;	
+		double dist=Math.sqrt(x*x+y*y);
+		
 		// calculate the geodetic curve
-		GlobalCoordinates projected = geoCalc.calculateEndingGlobalCoordinates(reference, eiffelTower, 100, 1000);
+		GlobalCoordinates projected = geoCalc.calculateEndingGlobalCoordinates(reference, eiffelTower, angle, dist);
 	    System.out.printf("   Destination: %1.4f%s", projected.getLatitude(), (projected.getLatitude() > 0) ? "N" : "S" );
 	    System.out.printf(", %1.4f%s\n", projected.getLongitude(), (projected.getLongitude() > 0) ? "E" : "W");	
 	}
